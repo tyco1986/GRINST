@@ -1,0 +1,23 @@
+{
+  "name": "grinst",
+  "version": "1.0.0",
+  "description": "Web of Antonio",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyco1986/GRINST.git"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "tyco1986",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyco1986/GRINST/issues"
+  },
+  "homepage": "https://github.com/tyco1986/GRINST#readme"
+}

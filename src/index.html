@@ -48,95 +48,12 @@ img {
     color:  #dc3545;
 }
 .nav-item:hover {
-    text-decoration: underline;
+    text-decoration-color: underline;
     text-decoration-color: #dc3545;
 }
 .navbar {
     box-shadow: 0 10px 2px -2px rgba(0,0,0,.2);
-    grid-area: navbar;
 }
-.row {
-  width: 100%;
-}
-.col-6{
-  width: 50%;
-}
-.carousel_01 {
-    grid-area: carousel_01;
-}
-.text_01 {
-    grid-area: text_01;
-}
-.logo_01 {
-    grid-area: logo_01;
-}
-.home_01 {
-    grid-area: home_01;
-}
-.cards_01 {
-    grid-area: cards_01;
-  }
-.textrusel {
-    grid-area: textrusel;
-}
-.container {
-    width: 100%;
-    background: LightGray;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    grid-gap: 10px;
-    grid-template-areas:
-      "logo_01"
-      "home_01"
-      "cards_01";
-}
-@media (min-width: 0) {
-  .container{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas:
-      "logo_01"
-      "home_01"
-      "cards_01";
-  }
-}
-@media (min-width: 576px) {
-  .container{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas:
-      "navbar"
-      "textrusel"
-      "cards_01";
-  }
-}
-@media (min-width: 768px) {
-  .container{
-
-  }
-}
-@media (min-width: 992px) {
-  .container{
-    width: 100%;
-    background: LightGray;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 10px;
-    grid-template-areas:
-      "logo_01 logo_01"
-      "home_01 home_01"
-      "carousel_01 carousel_01";
-
-  }
-}
-@media (min-width: 1200px) {
-  .container{
-
-  }
-}
-
 
 </style>
 </head>
@@ -145,18 +62,45 @@ img {
 <div class="row">
   <main class="container">
 
-    <!-- MENU -->
+    <!-- NAVBAR -->
     <div class="row navbar navbar-expand-lg navbar-dark bg-dark">
       <!-- LOGO -->
-      <div class="col-3 logo_01">
+      <div class="col-md-3">
         <a class="navbar-brand" href="#">G&R</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-
-      <!-- HOME -->
-      <div class="col-9 home_01">
+      <!-- HOME XL -->
+      <div class="col-md-9 d-none d-xl-block">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Telefonia<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Redes<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Imagen<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Otros<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Mantenimientos<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contacto<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+     <!-- HOME -->
+      <div class="col-md-9 d-xl-none">
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ">
             <li class="nav-item active">
@@ -165,7 +109,7 @@ img {
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Telefonia/Sonido</a>
+                <a class="dropdown-item" href="#">Telefonia</a>
                 <a class="dropdown-item" href="#">Redes</a>
                 <a class="dropdown-item" href="#">Imagen/Video</a>
                 <a class="dropdown-item" href="#">Otros</a>
@@ -174,24 +118,30 @@ img {
               </div>
             </li>
             <li class="nav-item active">
-            <button type="button" class="btn btn-light">G&R</button>
+              <a class="nav-link" href="#">Contacto<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
       </div>
+
+
+
+
+
+
     </div>
 
     <!--CARRUSEL/TEXTO-->
-    <div class="row textrusel">
+    <div class="row">
 
       <!--TEXTO-->
-      <div class="col-6 text_01">
+      <section class="col-7">
         <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit¡.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero inventore molestias, aliquam praesentium dolor facere porro! Placeat itaque eos, consequuntur, officiis aspernatur incidunt laborum iusto magnam delectus eaque ducimus iste?</p>
-      </div>
+      </section>
       <!--CARRUSEL-->
 
-      <div class="col-6 carousel_01">
+      <section class="col-5">
         <div class="bd-example">
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -208,14 +158,14 @@ img {
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="movil2.png" class="d-block w-50" alt="...">
+                <img src="logos/contacto1.jpeg" class="d-block w-50" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>EL INIGUALABLE</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="movil3.png" class="d-block w-50" alt="...">
+                <img src="logos/contacto1.jpeg" class="d-block w-50" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>EL INCALCULABLE</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -233,12 +183,12 @@ img {
         </div>
 
           </div>
-      </div>
+      </section>
     </div>
 
     <!--CARDS-->
     <div class="container">
-      <div class="row cards_01">
+      <div class="row">
         <div class="col-4">
           <div class="card" style="width: 100%;">
             <img src="parabolica3.jpg" class="card-img-top" alt="...">
